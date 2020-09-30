@@ -58,6 +58,16 @@
     </style>
 </head>
 <body>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Gender</th>
+  </tr>
+
+
+
     <?php 
         $data = file_get_contents('person.json'); // put the contents of the file into a variable
         $persons = json_decode($data); // decode the JSON feed
@@ -73,12 +83,18 @@
         $totalpage = ceil($all / $show); //Total page
         $first = ($page * $show) - $show; // first result
 
-        for ($i=$first; $i < ($first+$show); $i++) { 
-            echo $persons[$i]->name;
+        for ($i=$first; $i < ($first+$show); $i++) {
+            echo "<tr>";
+            echo "<td>" . $persons[$i]->id . "</td>";
+            echo "<td>" . $persons[$i]->name . "</td>";
+            echo "<td>" . $persons[$i]->gender . "</td>";
+            echo "</tr>";
         }
     ?>
+
+</table>
     
-    <br /><br />
+
     <div class="pagination">
 
     <?php
