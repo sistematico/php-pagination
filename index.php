@@ -69,15 +69,15 @@
         } else { 
             $nav_page = '<a class="active" href="#">Page '.$page.' of '.$totalpage.': </a>'; 
             $limit_nav = 3; 
-            $start = ($page - $limit_nav <= 0) ? 1 : $page - $limit_nav; 
-
+            $start = ($page - $limit_nav <= 0) ? 1 : $page - $limit_nav;
             $end = $page + $limit_nav > $totalpage ? $totalpage : $page + $limit_nav; 
+
             if($page + $limit_nav >= $totalpage && $totalpage > $limit_nav * 2){ 
                 $start = $totalpage - $limit_nav * 2; 
             } 
 
             if($start != 1){ //show first page 
-                $nav_page .= '<span class="item"><a href="'.sprintf($link, 1).'"> [1] </a></span>'; 
+                $nav_page .= '<a href="?page=1">1</a>'; 
             } 
 
             if($start > 2){ //add ... 
