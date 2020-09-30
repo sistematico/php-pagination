@@ -69,7 +69,7 @@
             echo '<a class="active" href="#">1</a>'; 
         } else { 
             $nav_page = '<a class="active" href="#">Page '.$page.' of '.$totalpage.': </a>'; 
-            $limit_nav = 1; 
+            $limit_nav = 5; 
             $start = ($page - $limit_nav <= 0) ? 1 : $page - $limit_nav;
             $end = $page + $limit_nav > $totalpage ? $totalpage : $page + $limit_nav; 
 
