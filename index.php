@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Pagination</title>
     <style>
+        /* Pagination */
         .pagination {
             display: inline-block;
         }
@@ -36,6 +37,23 @@
         .pagination a:last-child {
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
+        }
+
+        /* Table */
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
         }
     </style>
 </head>
