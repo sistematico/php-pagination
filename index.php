@@ -106,7 +106,7 @@
             }
 
             if ($page + 3 < $totalpage){ //add next 
-                $nav_page .= '<a href="?page=' . ($page + 4) . '">&raquo;</a>'; 
+                $nav_page .= '<a href="?page=' . ($page + 1) . '">&raquo;</a>'; 
             }
 
             echo $nav_page; 
