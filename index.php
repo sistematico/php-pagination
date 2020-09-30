@@ -89,10 +89,11 @@
             } 
 
             for($i = $start; $i <= $end; $i++) { 
-                if($page == $i) 
+                if($page == $i) {
                     $nav_page .= '<span class="current">'.$i.'</span>'; 
-                else 
-                    $nav_page .= '<span class="item"><a href="'.sprintf($link, $i).'"> ['.$i.'] </a></span>'; 
+                } else {
+                    $nav_page .= '<span class="item"><a href="'.sprintf($link, $i).'">' . $i . '</a></span>'; 
+                }
             } 
 
             if ($page + 3 < $totalpage){ //add next 
