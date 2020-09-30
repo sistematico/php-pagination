@@ -85,7 +85,7 @@
             } 
 
             if($page > 5){ //add prev 
-                $nav_page .= '<a href="?page=' . $page-5 . '">&laquo;</a>'; 
+                $nav_page .= '<a href="?page=' . ($page - 5) . '">&laquo;</a>'; 
             } 
 
             for($i = $start; $i <= $end; $i++) { 
@@ -97,7 +97,7 @@
             } 
 
             if ($page + 3 < $totalpage){ //add next 
-                $nav_page .= '<a href="?page=' . $page+4 . '">&raquo;</a>'; 
+                $nav_page .= '<a href="?page=' . ($page + 4) . '">&raquo;</a>'; 
             } 
 
             if ($end + 1 < $totalpage){ //add ... 
