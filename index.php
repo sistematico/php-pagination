@@ -77,6 +77,10 @@
                 $start = $totalpage - $limit_nav * 2; 
             } 
 
+            if ($page > 5) { //add prev 
+                $nav_page .= '<a href="?page=' . ($page - 5) . '">&laquo;</a>'; 
+            } 
+
             if ($start != 1) { //show first page 
                 $nav_page .= '<a href="?page=1">1</a>'; 
             } 
@@ -85,12 +89,8 @@
                 $nav_page .= '<a href="#">...</a>'; 
             } 
 
-            if ($page > 5) { //add prev 
-                $nav_page .= '<a href="?page=' . ($page - 5) . '">&laquo;</a>'; 
-            } 
-
-            for($i = $start; $i <= $end; $i++) { 
-                if($page == $i) {
+            for ($i = $start; $i <= $end; $i++) { 
+                if ($page == $i) {
                     $nav_page .= '<a href="#">'.$i.'</a>'; 
                 } else {
                     $nav_page .= '<a href="?page=' . $i . '">' . $i . '</a>'; 
