@@ -39,30 +39,7 @@
         }
     </style>
 </head>
-
 <body>
-    <a class="prev" href="?page=<?php echo ($current_page - 1) ?>">Prev</a>
-    <?php if ($current_page > 2) : ?>
-        <a href="?page=1">1</a>
-    <?php endif ?>
-    <?php if ($current_page > 3) : ?>
-        <span class="dots">...</span>
-    <?php endif ?>
-    <?php if ($current_page - 1 > 0) : ?>
-        <a href="?page=<?php echo $current_page - 1 ?>"><?php echo $current_page - 1 ?></a>
-    <?php endif ?>
-    <span class="current"><?php echo $current_page ?></span>
-    <?php if ($current_page + 1 < $max_num_pages) : ?>
-        <a href="?page=<?php echo $current_page + 1 ?>"><?php echo $current_page + 1 ?></a>
-    <?php endif ?>
-    <?php if ($current_page < $max_num_pages) : ?>
-        <?php if ($current_page < $max_num_pages - 2) : ?>
-            <span class="dots">...</span>
-        <?php endif ?>
-        <a href="?page=<?php echo $max_num_pages ?>"><?php echo $max_num_pages ?></a>
-        <a class="next" href="?page=<?php echo ($current_page + 1) ?>">Next</a>
-    <?php endif ?>
-
     <div class="pagination">
     <a href="#">&laquo;</a>
     <a href="#">1</a>
@@ -77,9 +54,15 @@
     <?php 
         $data = file_get_contents('person.json'); // put the contents of the file into a variable
         $persons = json_decode($data); // decode the JSON feed
+        $all = count($persons);
+        //$persons = json_decode($data, true); // decode the JSON feed and make an associative array
 
-        foreach ($persons as $person) {
-            echo $person->name . '<br>';
+        // foreach ($persons as $person) {
+        //     echo $person->name . '<br>';
+        // }
+
+        for ($i=0; $i < ; $i++) { 
+            # code...
         }
     ?>
 </body>
