@@ -109,6 +109,8 @@
 
             if ($page + 1 < $totalpage){ //add next 
                 $nav_page .= '<a href="?page=' . ($page + 1) . '">&raquo;</a>'; 
+            } else {
+                $nav_page .= '<a href="#">&raquo;</a>'; 
             }
 
             echo $nav_page; 
