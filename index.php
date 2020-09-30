@@ -85,7 +85,7 @@
             } 
 
             if($page > 5){ //add prev 
-                $nav_page .= '<span class="item"><a href="'.sprintf($link, $page-5).'">&laquo;</a></span>'; 
+                $nav_page .= '<a href="?page=' . $page-5 . '">&laquo;</a>'; 
             } 
 
             for($i = $start; $i <= $end; $i++) { 
@@ -95,8 +95,8 @@
                     $nav_page .= '<span class="item"><a href="'.sprintf($link, $i).'"> ['.$i.'] </a></span>'; 
             } 
 
-            if($page + 3 < $totalpage){ //add next 
-                $nav_page .= '<span class="item"><a href="'.sprintf($link, $page+4).'">&raquo;</a></span>'; 
+            if ($page + 3 < $totalpage){ //add next 
+                $nav_page .= '<a href="?page=' . $page+4 . '">&raquo;</a>'; 
             } 
 
             if ($end + 1 < $totalpage){ //add ... 
@@ -104,7 +104,7 @@
             }  
 
             if ($end != $totalpage) { //show last page 
-                $nav_page .= '<span class="item"><a href="'.sprintf($link, $totalpage).'"> ['.$totalpage.'] </a></span>'; 
+                $nav_page .= '<a href="?page=' . $totalpage . '">' . $totalpage . '</a>'; 
             }
 
             echo $nav_page; 
