@@ -79,7 +79,9 @@
 
             if ($page > 1) { //add prev 
                 $nav_page .= '<a href="?page=' . ($page - 1) . '">&laquo;</a>'; 
-            } 
+            } else {
+                $nav_page .= '<a href="#">&laquo;</a>'; 
+            }
 
             if ($start != 1) { //show first page 
                 $nav_page .= '<a href="?page=1">1</a>'; 
