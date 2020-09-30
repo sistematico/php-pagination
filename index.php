@@ -60,6 +60,7 @@
         }
     ?>
     
+    <br /><br />
     <div class="pagination">
 
     <?php
@@ -92,7 +93,7 @@
                 if($page == $i) {
                     $nav_page .= '<span class="current">'.$i.'</span>'; 
                 } else {
-                    $nav_page .= '<span class="item"><a href="'.sprintf($link, $i).'">' . $i . '</a></span>'; 
+                    $nav_page .= '<a href="?page=' . $i . '">' . $i . '</a>'; 
                 }
             } 
 
