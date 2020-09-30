@@ -65,7 +65,7 @@
     <?php
 
         if ($totalpage == 0) {
-            echo 'Page 0 of 0'; 
+            echo '<a class="active" href="#">1</a>'; 
         } else { 
             $nav_page = '<div class="navpage"><span class="current">Page '.$page.' of '.$totalpage.': </span>'; 
             $limit_nav = 3; 
@@ -116,7 +116,7 @@
 
     <a href="#">&laquo;</a>
     <a href="#">1</a>
-    <a class="active" href="#">2</a>
+    
     <a href="#">3</a>
     <a href="#">4</a>
     <a href="#">5</a>
