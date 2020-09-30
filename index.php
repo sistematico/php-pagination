@@ -91,7 +91,6 @@
     <br />
     <div class="pagination">
     <?php
-
         if ($totalpage == 0) {
             echo '<a class="active" href="#">1</a>'; 
         } else { 
