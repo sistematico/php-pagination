@@ -69,7 +69,7 @@
             echo '<a class="active" href="#">1</a>'; 
         } else { 
             $nav_page = '<a class="active" href="#">Page '.$page.' of '.$totalpage.': </a>'; 
-            $limit_nav = 3; 
+            $limit_nav = 1; 
             $start = ($page - $limit_nav <= 0) ? 1 : $page - $limit_nav;
             $end = $page + $limit_nav > $totalpage ? $totalpage : $page + $limit_nav; 
 
@@ -78,7 +78,7 @@
             } 
 
             if ($page > 5) { //add prev 
-                $nav_page .= '<a href="?page=' . ($page - 5) . '">&laquo;</a>'; 
+                $nav_page .= '<a href="?page=' . ($page - 1) . '">&laquo;</a>'; 
             } 
 
             if ($start != 1) { //show first page 
@@ -105,7 +105,7 @@
                 $nav_page .= '<a href="?page=' . $totalpage . '">' . $totalpage . '</a>'; 
             }
 
-            if ($page + 3 < $totalpage){ //add next 
+            if ($page + 1 < $totalpage){ //add next 
                 $nav_page .= '<a href="?page=' . ($page + 1) . '">&raquo;</a>'; 
             }
 
