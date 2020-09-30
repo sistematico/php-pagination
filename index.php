@@ -81,7 +81,7 @@
             } 
 
             if($start > 2){ //add ... 
-                $nav_page .= '<span class="current">...</span>'; 
+                $nav_page .= '<a href="#">...</a>'; 
             } 
 
             if($page > 5){ //add prev 
@@ -100,7 +100,7 @@
             } 
 
             if ($end + 1 < $totalpage){ //add ... 
-                $nav_page .= '<span class="current">...</span>'; 
+                $nav_page .= '<a href="#">...</a>'; 
             }  
 
             if ($end != $totalpage) { //show last page 
