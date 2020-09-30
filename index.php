@@ -97,13 +97,13 @@
                 }
             } 
 
-            if ($page + 3 < $totalpage){ //add next 
-                $nav_page .= '<a href="?page=' . ($page + 4) . '">&raquo;</a>'; 
-            } 
-
             if ($end + 1 < $totalpage){ //add ... 
                 $nav_page .= '<a href="#">...</a>'; 
             }  
+
+            if ($page + 3 < $totalpage){ //add next 
+                $nav_page .= '<a href="?page=' . ($page + 4) . '">&raquo;</a>'; 
+            }
 
             if ($end != $totalpage) { //show last page 
                 $nav_page .= '<a href="?page=' . $totalpage . '">' . $totalpage . '</a>'; 
