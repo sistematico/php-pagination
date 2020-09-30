@@ -53,9 +53,9 @@
         $all = count($persons);
         $show = 5; //Show 5 result per page
         $totalpage = ceil($all / $show); //Total page
-        $start = ($page * $show) - $show; //Start result
+        $first = ($page * $show) - $show; // first result
 
-        for ($i=$start; $i < ($start+$show); $i++) { 
+        for ($i=$first; $i < ($first+$show); $i++) { 
             echo $persons[$i]->name;
         }
     ?>
@@ -67,9 +67,10 @@
         if ($totalpage == 0) {
             echo '<a class="active" href="#">1</a>'; 
         } else { 
-            $nav_page = '<div class="navpage"><span class="current">Page '.$page.' of '.$totalpage.': </span>'; 
+            $nav_page = '<a class="active" href="#">Page '.$page.' of '.$totalpage.': </a>'; 
             $limit_nav = 3; 
             $start = ($page - $limit_nav <= 0) ? 1 : $page - $limit_nav; 
+
             $end = $page + $limit_nav > $totalpage ? $totalpage : $page + $limit_nav; 
             if($page + $limit_nav >= $totalpage && $totalpage > $limit_nav * 2){ 
                 $start = $totalpage - $limit_nav * 2; 
@@ -102,9 +103,10 @@
                 $nav_page .= '<span class="current">...</span>'; 
             }  
 
-            if ($end != $totalpage) //show last page 
+            if ($end != $totalpage) { //show last page 
                 $nav_page .= '<span class="item"><a href="'.sprintf($link, $totalpage).'"> ['.$totalpage.'] </a></span>'; 
-            $nav_page .= '</div>'; 
+            }
+
             echo $nav_page; 
         } 
 
