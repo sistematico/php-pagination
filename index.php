@@ -77,7 +77,7 @@
                 $start = $totalpage - $limit_nav * 2; 
             } 
 
-            if ($page > 5) { //add prev 
+            if ($page > 1) { //add prev 
                 $nav_page .= '<a href="?page=' . ($page - 1) . '">&laquo;</a>'; 
             } 
 
