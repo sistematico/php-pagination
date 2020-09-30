@@ -91,7 +91,7 @@
 
             for($i = $start; $i <= $end; $i++) { 
                 if($page == $i) {
-                    $nav_page .= '<span class="current">'.$i.'</span>'; 
+                    $nav_page .= '<a href="#">'.$i.'</a>'; 
                 } else {
                     $nav_page .= '<a href="?page=' . $i . '">' . $i . '</a>'; 
                 }
