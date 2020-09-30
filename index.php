@@ -54,15 +54,20 @@
     <?php 
         $data = file_get_contents('person.json'); // put the contents of the file into a variable
         $persons = json_decode($data); // decode the JSON feed
+
+        if (isset($_GET['page'])) {
+            $page = intval($_GET['page']);
+        } else {
+            $page = 1;
+        }
+
         $all = count($persons);
-        //$persons = json_decode($data, true); // decode the JSON feed and make an associative array
+        $show = 5; //Show 5 result per page
+        $totalpage = ceil($all / $show); //Total page
+        $start = ($page * $show) - $show; //Start result
 
-        // foreach ($persons as $person) {
-        //     echo $person->name . '<br>';
-        // }
-
-        for ($i=0; $i < ; $i++) { 
-            # code...
+        for ($i=$start; $i < ($start+$show); $i++) { 
+            echo $persons[$i]->name;
         }
     ?>
 </body>
