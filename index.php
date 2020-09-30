@@ -51,7 +51,7 @@
         }
 
         $all = count($persons);
-        $show = 5; //Show 5 result per page
+        $show = 3; //Show 5 result per page
         $totalpage = ceil($all / $show); //Total page
         $first = ($page * $show) - $show; // first result
 
@@ -72,19 +72,19 @@
             $start = ($page - $limit_nav <= 0) ? 1 : $page - $limit_nav;
             $end = $page + $limit_nav > $totalpage ? $totalpage : $page + $limit_nav; 
 
-            if($page + $limit_nav >= $totalpage && $totalpage > $limit_nav * 2){ 
+            if ($page + $limit_nav >= $totalpage && $totalpage > $limit_nav * 2){ 
                 $start = $totalpage - $limit_nav * 2; 
             } 
 
-            if($start != 1){ //show first page 
+            if ($start != 1) { //show first page 
                 $nav_page .= '<a href="?page=1">1</a>'; 
             } 
 
-            if($start > 2){ //add ... 
+            if ($start > 2) { //add ... 
                 $nav_page .= '<a href="#">...</a>'; 
             } 
 
-            if($page > 5){ //add prev 
+            if ($page > 5) { //add prev 
                 $nav_page .= '<a href="?page=' . ($page - 5) . '">&laquo;</a>'; 
             } 
 
@@ -112,19 +112,6 @@
         } 
 
     ?>
-
-
-
-
-
-    <a href="#">&laquo;</a>
-    <a href="#">1</a>
-    
-    <a href="#">3</a>
-    <a href="#">4</a>
-    <a href="#">5</a>
-    <a href="#">6</a>
-    <a href="#">&raquo;</a>
 </div>
 </body>
 </html>
